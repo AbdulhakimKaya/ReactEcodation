@@ -1,3 +1,117 @@
+/* 
+Project: One Page
+Author: Abdulhakim KAYA
+Date: 15 June 2023
+Versin: v.1
+*/
+
+/* ###################### */
+
+/* Root */
+
+/* ###################### */
+
+/* Common Property */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+}
+
 body {
     font-family: 'Manrope', sans-serif;
+    line-height: 1.2;
+    position: relative;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style-type: square;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+img:hover {
+    opacity: 0.9;
+    box-shadow: 2px 2px 2px 2px purple;
+    transition: 3s all;
+    cursor: pointer;
+}
+
+i {
+    font-size: 1.5rem;
+}
+
+.my_clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Special Size */
+
+.fontsize1 {
+    font-size: 1rem;
+}
+
+.fontsize2 {
+    font-size: 2rem;
+}
+
+.fontsize3 {
+    font-size: 3rem;
+}
+
+.fontsize4 {
+    font-size: 4rem;
+}
+
+/* Line Clamp */
+
+.line_clamp3 {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    
+}
+
+.line_clamp5 {
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    
+}
+
+.line_clamp8 {
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    
+}
+
+/* ###################### */
+
+ /* Header */
+
+ header {
+    background-image: url("./img/hacker.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: -1;
+    padding: 4rem;
 }
