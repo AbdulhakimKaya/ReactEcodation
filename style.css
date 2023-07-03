@@ -8,6 +8,9 @@ Versin: v.1
 /* ###################### */
 
 /* Root */
+:root {
+    --templateBgColor: #000000;
+}
 
 /* ###################### */
 
@@ -105,6 +108,13 @@ i {
 
 /* ###################### */
 
+/* Navbar */
+.dark_mode {
+    background-color: var(--templateBgColor);
+    color: #ffffff;
+}
+
+
  /* Header */
 
  header {
@@ -115,3 +125,11 @@ i {
     z-index: -1;
     padding: 4rem;
 }
+
+/* Footer */
+footer {
+    min-height: 15rem;
+    width: auto;
+    color: #ffffff;
+}
+
