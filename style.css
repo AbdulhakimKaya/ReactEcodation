@@ -80,6 +80,10 @@ i {
     font-size: 4rem;
 }
 
+.my_heading {
+    text-shadow: 5px -5px rgba(0, 0, 0, 0.5);
+}
+
 /* Line Clamp */
 
 .line_clamp3 {
@@ -124,6 +128,10 @@ i {
     background-position: 50% 50%;
     z-index: -1;
     padding: 4rem;
+}
+
+#messages i {
+    font-size: 3.5rem;
 }
 
 /* Footer */
