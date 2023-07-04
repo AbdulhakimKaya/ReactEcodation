@@ -60,8 +60,8 @@
               <i class="fa-regular fa-user fa-sm"></i>
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Login</a></li>
-              <li><a class="dropdown-item" href="#">Register</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#login">Login</a></li>
+              <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#register">Register</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -84,6 +84,72 @@
     </div>
   </nav>
   <!-- end nav code -->
+
+  <!-- Start Login Modal -->
+  <div class="modal fade" id="login" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Login Modal -->
+
+  <!-- Start Register Modal -->
+  <div class="modal fade" id="register" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputFirstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="exampleInputFirstName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputLastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="exampleInputLastName" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputConfirmPassword1" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputConfirmPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Register Modal -->
 
   <!-- start header code -->
   <header id="header_id">
@@ -211,6 +277,9 @@
   </footer>
   <!-- end footer code -->
 
+  <a href="#navbar_id" id="back_top" class="btn btn-secondary">
+    <i class="fa-solid fa-arrow-up-long"></i>
+  </a>
 
   <!-- end code -->
 

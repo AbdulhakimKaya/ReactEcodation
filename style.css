@@ -133,3 +133,13 @@ footer {
     color: #ffffff;
 }
 
+/* Back Top */
+#back_top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+#back_top:hover {
+    opacity: 0.9;
+}
