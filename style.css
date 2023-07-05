@@ -91,7 +91,7 @@ i {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-    
+
 }
 
 .line_clamp5 {
@@ -99,7 +99,7 @@ i {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-    
+
 }
 
 .line_clamp8 {
@@ -107,7 +107,7 @@ i {
     -webkit-box-orient: vertical;
     display: -webkit-box;
     overflow: hidden;
-    
+
 }
 
 /* ###################### */
@@ -119,9 +119,9 @@ i {
 }
 
 
- /* Header */
+/* Header */
 
- header {
+header {
     background-image: url("./img/hacker.jpg");
     background-repeat: no-repeat;
     background-size: cover;
