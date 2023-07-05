@@ -143,6 +143,15 @@ i {
     padding: 3rem;
 }
 
+#newspaper {
+    text-align: justify;
+}
+
+#blog {
+    background-color: #594F63;
+
+}
+
 /* Footer */
 footer {
     min-height: 15rem;
