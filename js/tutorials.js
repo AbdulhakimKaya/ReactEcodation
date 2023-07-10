@@ -520,12 +520,47 @@ let arr = () => {
     return numbers
 }
 
-    console.log("Tek sayılar: " + oddNumber)
-    console.log("Tek sayıların adedi: " + oddCounter)
-    console.log("Tek sayıların toplamı: " + oddSum)
+let arrResult = () => {
+    let data = arr()
+    // console.log(data)
+    // console.log(data[0])
+    // console.log(data[5])
+    // console.log(data[data.length-1])
+    //
+    // console.log("-------------------")
+    //
+    // // For Loop
+    // for (let i = 0; i < data.length; i++) {
+    //     console.log(data[i])
+    // }
+    //
+    // console.log("-------------------")
+    //
+    // // For in
+    // for (const dataKey in data) {
+    //     console.log(dataKey + " -> " + data[dataKey])
+    // }
+    //
+    // // For of
+    // console.log("-------------------")
+    //
+    // for (const dataValue of data) {
+    //     console.log(dataValue)
+    // }
+    //
+    // console.log("-------------------")
 
-    console.log("Çift sayılar: " + evenNumber)
-    console.log("Çift sayıların adedi: " + evenCounter)
-    console.log("Çift sayıların toplamı: " + evenSum)
+    // For Each
+    // data.forEach(function (value, index, array){
+    //     console.log(index + " -> " + value)
+    // })
+
+
+    // filter
+
+    // map
+
+    // fill
 }
-sumExamplesData()
+arrResult()
+
