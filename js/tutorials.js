@@ -234,9 +234,80 @@ x--
 
 
 // Immedia Function ()();
-
+// (function () {
+//     console.log("Immedia Function")
+// })();
 
 // Conditions
+const condition=()=>{
+    let number = 5
+    if (number>=3){
+        console.log("sayı büyüktür")
+    }
+    else {
+        console.log("sayı küçüktür")
+    }
+}
+condition()
 
+const condition2=()=>{
+    let number = 5
+    if (number>=3)
+        console.log("sayı büyüktür")
+    else
+        console.log("sayı küçüktür")
+}
+condition2()
 
+const condition3=()=>{
+    let number = 5
+    let result = (number>=3) ? "sayı büyüktür" : "sayı küçüktür"
+    console.log(result)
+}
+condition3()
+
+const condition4=()=>{
+    let number = 5
+    if (number===1){
+        console.log("1")
+    }
+    else if(number===2){
+        console.log("2")
+    }
+    else if(number===3){
+        console.log("3")
+    }
+    else if(number===4){
+        console.log("4")
+    }
+    else{
+        console.log("0 < sayı < 5 aralığında değildir")
+    }
+}
+condition4()
+
+const condition5=()=>{
+    let number = 5
+    // break -> döngü kırmak
+    // return -> metot kırmak
+    // continue -> 1 kerelik es geç sonra döngüye devam et
+    switch (number) {
+        case 1:
+            console.log("1")
+            break
+        case 2:
+            console.log("2")
+            break
+        case 3:
+            console.log("3")
+            break
+        case 4:
+            console.log("4")
+            break
+        default:
+            console.log("0 < sayı < 5 aralığında değildir")
+            break
+    }
+}
+condition5()
 // Loops
