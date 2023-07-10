@@ -259,55 +259,111 @@ const condition2=()=>{
 }
 condition2()
 
-const condition3=()=>{
-    let number = 5
-    let result = (number>=3) ? "sayı büyüktür" : "sayı küçüktür"
-    console.log(result)
-}
-condition3()
 
-const condition4=()=>{
-    let number = 5
-    if (number===1){
-        console.log("1")
-    }
-    else if(number===2){
-        console.log("2")
-    }
-    else if(number===3){
-        console.log("3")
-    }
-    else if(number===4){
-        console.log("4")
-    }
-    else{
-        console.log("0 < sayı < 5 aralığında değildir")
-    }
-}
-condition4()
-
-const condition5=()=>{
-    let number = 5
-    // break -> döngü kırmak
-    // return -> metot kırmak
-    // continue -> 1 kerelik es geç sonra döngüye devam et
-    switch (number) {
-        case 1:
-            console.log("1")
-            break
-        case 2:
-            console.log("2")
-            break
-        case 3:
-            console.log("3")
-            break
-        case 4:
-            console.log("4")
-            break
-        default:
-            console.log("0 < sayı < 5 aralığında değildir")
-            break
-    }
-}
-condition5()
 // Loops
+// let loop = () => {
+//     for (let i = 0; i < 10; i++) {
+//         document.writeln(i + " ")
+//     }
+// }
+// loop()
+// document.writeln("<br/>")
+//
+// let loop2 = () => {
+//     let number = 1
+//     while (number <= 10) {
+//         document.writeln(number + " ")
+//         number++
+//     }
+//
+// }
+// loop2()
+// document.writeln("<br/>")
+//
+// let loop3 = () => {
+//     let number = 1
+//     do {
+//         document.writeln(number + " ")
+//         number++
+//     }
+//     while (number >= 10)
+//
+// }
+// loop3()
+
+
+// try catch
+// let tryCatchTutorial = () => {
+//     try {
+//         alertx("deneme")
+//     }
+//     catch (error){
+//         console.log("hata mesajı: " + error.message)
+//         console.log("hata mesajı: " + error.name)
+//         console.error(error)
+//     }
+//     finally {
+//         console.log("db.close")
+//         console.log("port.close")
+//     }
+//     console.log("son satır")
+// }
+// tryCatchTutorial()
+
+
+// Debug
+// const debugData=()=>{
+//     let sum = 0
+//     for (let i = 0; i < 10; i++) {
+//         sum = sum + i
+//     }
+//     console.log("Toplam = " + sum)
+// }
+// debugData()
+
+// Example
+let sumExamplesData = () => {
+    let commonSum = 0
+    let oddSum = 0, oddCounter = 0, oddNumber = ""
+    let evenSum = 0, evenCounter = 0, evenNumber = ""
+    // user data
+    let userData = Number(prompt("Lütfen bitiş sayısını yazınız: "))
+    for (let i = 0; i < userData; i++) {
+        if (userData === 21){
+            console.log("secret key number failed " + userData)
+            break
+        }
+
+        if (i === 50){
+            console.log("en fazla 50 sayısına kadar hesaplanır " + userData)
+            break
+        }
+
+        if (i === 7){
+            console.log("7 sayısını toplama " + userData)
+            continue
+        }
+
+        if (i %2===0){
+            evenSum += 1
+            evenCounter ++
+            evenNumber = evenNumber + " " + i
+        }
+        else {
+            oddSum += 1
+            oddCounter ++
+            oddNumber = oddNumber + " " + i
+        }
+        commonSum += i
+    }
+    console.log("Toplam: " + commonSum)
+
+    console.log("Tek sayılar: " + oddNumber)
+    console.log("Tek sayıların adedi: " + oddCounter)
+    console.log("Tek sayıların toplamı: " + oddSum)
+
+    console.log("Çift sayılar: " + evenNumber)
+    console.log("Çift sayıların adedi: " + evenCounter)
+    console.log("Çift sayıların toplamı: " + evenSum)
+}
+sumExamplesData()
