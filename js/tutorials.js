@@ -557,8 +557,18 @@ let arrResult = () => {
 
 
     // filter
+    let result = data.filter((value, index, array) => {
+        return value %2===0
+    }).forEach((value, index, array) => {
+        document.writeln(`${index} => ${value} <br/>`)
+    })
 
     // map
+    let result2 = data.map((value, index, array) => {
+        return value += 10
+    }).forEach((value, index, array) => {
+        document.writeln(`${index} => ${value} <br/>`)
+    })
 
     // fill
 }
