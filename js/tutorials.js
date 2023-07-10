@@ -570,7 +570,24 @@ let arrResult = () => {
         document.writeln(`${index} => ${value} <br/>`)
     })
 
-    // fill
+    // dizilere devam
+    document.writeln("Eleman sayısı: " + data.length)
+    data.push(99)  // sona eleman eklenir
+    data.unshift(11)  // başa eleman eklenir
+    console.log(data)
+
+    data.pop()    // sondan 1 eleman çıkartılır
+    data.shift()  // baştan 1 eleman çıkartılır
+    console.log(data)
+
+    data.sort()  // dizi sıralanır
+    console.log(data)
+
+    data.reverse()  // dizi sırası baştan sona değişir
+    console.log(data)
+
+    console.log(data.toString())  // dizi string'e çevirilir
+    console.log(data.toString().substring(0,3))
 }
 arrResult()
 
