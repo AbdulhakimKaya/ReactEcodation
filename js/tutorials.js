@@ -449,19 +449,76 @@ x--
 // }
 // firstNameAndLastNameMasking();
 
-        if (i %2===0){
-            evenSum += 1
-            evenCounter ++
-            evenNumber = evenNumber + " " + i
-        }
-        else {
-            oddSum += 1
-            oddCounter ++
-            oddNumber = oddNumber + " " + i
-        }
-        commonSum += i
-    }
-    console.log("Toplam: " + commonSum)
+// Software Principle
+// KISS, YAGNI, SOLID, CLEAN CODE, SPAGETTI CODE, DUMMY CODE
+
+
+// Monad
+// const birinci = () => {
+//     let data = Number(prompt("Lütfen sayı giriniz: "))
+//     return data
+// }
+//
+// const ikinci = () => {
+//     let data = birinci()
+//     console.log(Math.sqrt(data))
+// }
+// ikinci()
+
+
+// setTimeout(), setInterval()
+
+// belirli zaman sonra tek bir kere çalışır ve durur
+// setTimeout(function () {
+//     console.log("setTimeOut çalıştı")
+// },2000)
+//
+// // belirli zaman sonra çalışır ve sonsuza kadar belirli zaman aralığında kapanıp tekrar çalışır
+// setInterval(function () {
+//     console.log("setInterval çalıştı")
+// },2000)
+
+
+// callback function
+// const birinci = (data) => {
+//     console.log(Math.pow(2, data))
+//     return data
+// }
+//
+// const ikinci = (callbackFunction) => {
+//     let number = Number(prompt("Lütfen sayı giriniz: "))
+//     let data = callbackFunction(number)
+//     console.log(data)
+// }
+// ikinci(birinci)
+
+
+// promise
+// const promiseTutorials = () => {
+//     // 1 tane catch olmak zorunda
+//     let data = new Promise((resolve, reject) => {
+//         let status = 200
+//         if (status === 400) {
+//             resolve("çalıştı")
+//         } else {
+//             reject("çalışmadı")
+//         }
+//     })
+//         .then(() => {
+//             console.log("olumlu")
+//         })
+//         .catch((err) => {
+//             console.error(err)
+//         })
+// }
+// promiseTutorials()
+
+
+// Dizi
+let arr = () => {
+    let numbers = [3,5,8,2,0,9]
+    return numbers
+}
 
     console.log("Tek sayılar: " + oddNumber)
     console.log("Tek sayıların adedi: " + oddCounter)
