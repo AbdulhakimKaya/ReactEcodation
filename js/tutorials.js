@@ -381,27 +381,73 @@ x--
 // debugData()
 
 // Example
-let sumExamplesData = () => {
-    let commonSum = 0
-    let oddSum = 0, oddCounter = 0, oddNumber = ""
-    let evenSum = 0, evenCounter = 0, evenNumber = ""
-    // user data
-    let userData = Number(prompt("Lütfen bitiş sayısını yazınız: "))
-    for (let i = 0; i < userData; i++) {
-        if (userData === 21){
-            console.log("secret key number failed " + userData)
-            break
-        }
+// let sumExamplesData = () => {
+//     let commonSum = 0
+//     let oddSum = 0, oddCounter = 0, oddNumber = ""
+//     let evenSum = 0, evenCounter = 0, evenNumber = ""
+//     // user data
+//     let userData = Number(prompt("Lütfen bitiş sayısını yazınız: "))
+//     for (let i = 0; i < userData; i++) {
+//         if (userData === 21){
+//             console.log("secret key number failed " + userData)
+//             break
+//         }
+//
+//         if (i === 50){
+//             console.log("en fazla 50 sayısına kadar hesaplanır " + userData)
+//             break
+//         }
+//
+//         if (i === 7){
+//             console.log("7 sayısını toplama " + userData)
+//             continue
+//         }
+//
+//         if (i %2===0){
+//             evenSum += 1
+//             evenCounter ++
+//             evenNumber = evenNumber + " " + i
+//         }
+//         else {
+//             oddSum += 1
+//             oddCounter ++
+//             oddNumber = oddNumber + " " + i
+//         }
+//         commonSum += i
+//     }
+//     console.log("Toplam: " + commonSum)
+//
+//     console.log("Tek sayılar: " + oddNumber)
+//     console.log("Tek sayıların adedi: " + oddCounter)
+//     console.log("Tek sayıların toplamı: " + oddSum)
+//
+//     console.log("Çift sayılar: " + evenNumber)
+//     console.log("Çift sayıların adedi: " + evenCounter)
+//     console.log("Çift sayıların toplamı: " + evenSum)
+// }
+// sumExamplesData()
 
-        if (i === 50){
-            console.log("en fazla 50 sayısına kadar hesaplanır " + userData)
-            break
-        }
 
-        if (i === 7){
-            console.log("7 sayısını toplama " + userData)
-            continue
-        }
+// Example
+// let firstNameAndLastNameMasking = () => {
+//     const firstNameAndLastName = prompt("Lütfen adınızı ve soyadınızı giriniz");
+//
+//     const userIndex = firstNameAndLastName.indexOf(" ");
+//     let firstName = firstNameAndLastName.substring(0, userIndex);
+//     for (let i = 1; i < firstName.length; i++) {
+//         firstName = firstName.replace(firstName.charAt(i), "*");
+//     }
+//     firstName = firstName.toUpperCase()
+//     console.log(firstName.toUpperCase());
+//
+//     let lastName = firstNameAndLastName.substring(userIndex + 1, firstNameAndLastName.length).toUpperCase();
+//     for (let i = 3; i <= firstName.length; i++) {
+//         lastName = lastName.replace(lastName.charAt(i), "*");
+//     }
+//     console.log(lastName);
+//     console.log(firstName.concat(" ").concat(lastName));
+// }
+// firstNameAndLastNameMasking();
 
         if (i %2===0){
             evenSum += 1
