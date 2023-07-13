@@ -515,13 +515,13 @@ x--
 
 
 // Dizi
-let arr = () => {
-    let numbers = [3,5,8,2,0,9]
-    return numbers
-}
-
-let arrResult = () => {
-    let data = arr()
+// let arr = () => {
+//     let numbers = [3,5,8,2,0,9]
+//     return numbers
+// }
+//
+// let arrResult = () => {
+//     let data = arr()
     // console.log(data)
     // console.log(data[0])
     // console.log(data[5])
@@ -557,37 +557,114 @@ let arrResult = () => {
 
 
     // filter
-    let result = data.filter((value, index, array) => {
-        return value %2===0
-    }).forEach((value, index, array) => {
-        document.writeln(`${index} => ${value} <br/>`)
-    })
+//     let result = data.filter((value, index, array) => {
+//         return value %2===0
+//     }).forEach((value, index, array) => {
+//         document.writeln(`${index} => ${value} <br/>`)
+//     })
+//
+//     // map
+//     let result2 = data.map((value, index, array) => {
+//         return value += 10
+//     }).forEach((value, index, array) => {
+//         document.writeln(`${index} => ${value} <br/>`)
+//     })
+//
+//     // dizilere devam
+//     document.writeln("Eleman sayısı: " + data.length)
+//     data.push(99)  // sona eleman eklenir
+//     data.unshift(11)  // başa eleman eklenir
+//     console.log(data)
+//
+//     data.pop()    // sondan 1 eleman çıkartılır
+//     data.shift()  // baştan 1 eleman çıkartılır
+//     console.log(data)
+//
+//     data.sort()  // dizi sıralanır
+//     console.log(data)
+//
+//     data.reverse()  // dizi sırası baştan sona değişir
+//     console.log(data)
+//
+//     console.log(data.toString())  // dizi string'e çevirilir
+//     console.log(data.toString().substring(0,3))
+// }
+// arrResult()
 
-    // map
-    let result2 = data.map((value, index, array) => {
-        return value += 10
-    }).forEach((value, index, array) => {
-        document.writeln(`${index} => ${value} <br/>`)
-    })
 
-    // dizilere devam
-    document.writeln("Eleman sayısı: " + data.length)
-    data.push(99)  // sona eleman eklenir
-    data.unshift(11)  // başa eleman eklenir
-    console.log(data)
+// callback - promise example
+let callbackFunctionComputer = () => {
+    // dizi içerisinde 5 tane random obje oluşturalım
+    const computerArray = []
 
-    data.pop()    // sondan 1 eleman çıkartılır
-    data.shift()  // baştan 1 eleman çıkartılır
-    console.log(data)
+    for (let i = 0; i < 5; i++) {
+        let computerObject = {
+            computerName: `callback Computer + ${i + 1}`,
+            price: `${i + 1}` * `${Number(100)}`
+        }
+        computerArray.push(computerObject)
+    }
+    console.log(computerArray)
 
-    data.sort()  // dizi sıralanır
-    console.log(data)
+    // bu dizi içindeki sadece computerName alanlarını gösterelim (map ile)
+    const arrayInComputerName = () => {
+        computerArray.map((value) => {
+            console.log(`${value.computerName}`)
+        })
+    }
+    arrayInComputerName()
 
-    data.reverse()  // dizi sırası baştan sona değişir
-    console.log(data)
-
-    console.log(data.toString())  // dizi string'e çevirilir
-    console.log(data.toString().substring(0,3))
+    // callback Function Price
+    const arrayInComputerPrice = (object, callbackFunction) => {
+        computerArray.push(object)
+        callbackFunction()
+    }
+    arrayInComputerPrice({computerName: "callback Computer 6", price: 6000}, arrayInComputerName)
 }
-arrResult()
+callbackFunctionComputer()
+
+
+let promiseFunctionComputer = () => {
+    // dizi içerisinde 5 tane random obje oluşturalım
+    const computerArray = []
+
+    for (let i = 0; i < 5; i++) {
+        let computerObject = {
+            computerName: `callback Computer + ${i + 1}`,
+            price: `${i + 1}` * `${Number(100)}`
+        }
+        computerArray.push(computerObject)
+    }
+    console.log(computerArray)
+
+    // bu dizi içindeki sadece computerName alanlarını gösterelim (map ile)
+    const arrayInComputerName = () => {
+        computerArray.map((value) => {
+            console.log(`${value.computerName}`)
+        })
+    }
+    arrayInComputerName()
+
+    // promise Function Object
+    const arrayInComputerObject = (object, callbackFunction) => {
+        const promiseReturn = new Promise(() => {
+            computerArray.push(object)
+        })
+        return promiseReturn
+    }
+    arrayInComputerObject({computerName: "callback Computer 6", price: 6000})
+        .then((response) => {
+            console.log(response)})
+        .catch((err) => {
+            console.log(err)})
+}
+promiseFunctionComputer()
+
+// object
+// event
+// listener
+// dom
+// localStorage
+// KDV hesaplaması
+// jquery ajax GET/POST
 
