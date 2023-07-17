@@ -726,46 +726,51 @@ x--
 
 
 // call, apply, bind
-let noParameterCallApplyBind = () => {
-    // function
-    let functionOtherObject = function () {
-        document.writeln(`Parametresiz Function: ${this.adi} <br/>`)
-    }
-
-    // object
-    let objectData = {
-        "adi": "Spora gidiyorum."
-    }
-
-    functionOtherObject.call(objectData)
-    functionOtherObject.apply(objectData)
-
-    let example = functionOtherObject.bind(objectData)
-    example()
-}
-noParameterCallApplyBind()
-
-let parameterCallApplyBind = () => {
-    // function
-    let functionOtherObject = function (surname) {
-        document.writeln(`Parametreli Function: ${this.adi} => ${surname} <br/>`)
-    }
-
-    // object
-    let objectData = {
-        "adi": "Abdulhakim"
-    }
-
-    functionOtherObject.call(objectData, "KAYA")
-    functionOtherObject.apply(objectData, ["KAYA"])
-
-    let example = functionOtherObject.bind(objectData, "KAYA")
-    example()
-}
-parameterCallApplyBind()
+// let noParameterCallApplyBind = () => {
+//     // function
+//     let functionOtherObject = function () {
+//         document.writeln(`Parametresiz Function: ${this.adi} <br/>`)
+//     }
+//
+//     // object
+//     let objectData = {
+//         "adi": "Spora gidiyorum."
+//     }
+//
+//     functionOtherObject.call(objectData)
+//     functionOtherObject.apply(objectData)
+//
+//     let example = functionOtherObject.bind(objectData)
+//     example()
+// }
+// noParameterCallApplyBind()
+//
+// let parameterCallApplyBind = () => {
+//     // function
+//     let functionOtherObject = function (surname) {
+//         document.writeln(`Parametreli Function: ${this.adi} => ${surname} <br/>`)
+//     }
+//
+//     // object
+//     let objectData = {
+//         "adi": "Abdulhakim"
+//     }
+//
+//     functionOtherObject.call(objectData, "KAYA")
+//     functionOtherObject.apply(objectData, ["KAYA"])
+//
+//     let example = functionOtherObject.bind(objectData, "KAYA")
+//     example()
+// }
+// parameterCallApplyBind()
 
 
 // event
+let eventFunction = () => {
+    alert("deneme")
+}
+
+
 // listener
 // dom
 // localStorage
