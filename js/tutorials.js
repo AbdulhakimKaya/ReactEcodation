@@ -782,8 +782,29 @@ let newDateData = () => {
     // Text
     // text.innerText = `<b><mark> ${new Date().getFullYear()} </mark></b>`
     text.innerText = `${new Date().getFullYear()}`
+
+    // Css
+    text.style.color = "red"
+    text.style.backgroundColor = "black"
+    text.style.padding = "5px"
 }
 
+// örnek -> paragrafın üzerine geldiğinde paragrafın altında yazı yazdırılsın
+let paragraphFunction = () => {
+    let text = document.getElementById("text_data2")
+    text.innerText = "paragrafın üzerine geldiniz"
+}
+
+let domData = () => {
+    // ID
+    let domUserData = document.getElementById("dom_id").innerText = "ID"
+
+    // Class
+    let domUserData2 = document.getElementsByClassName("dom_class")[0].innerText = "class data"
+
+    // Tag
+    let domUserData3 = document.getElementsByTagName("p")[1].innerText = "tag data"
+}
 
 
 // listener

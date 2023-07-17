@@ -4,15 +4,15 @@
 <head>
     <title>One Page</title>
     <!-- for language -->
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
 
     <!-- for responsive design -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
     <!-- SEO -->
-    <meta name="author" content="Abdulhakim KAYA" />
-    <meta name="description" content="for react ecodation" />
-    <meta name="keyword" content="Html5, Css3, Js, Bootstrap5, React" />
+    <meta name="author" content="Abdulhakim KAYA"/>
+    <meta name="description" content="for react ecodation"/>
+    <meta name="keyword" content="Html5, Css3, Js, Bootstrap5, React"/>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
@@ -38,28 +38,51 @@
 <div class="container">
     <h3 class="text-center text-warning display-4">JavaScript</h3>
 
-    <button class="btn btn-primary" onclick="eventFunction()">onclick</button>
-    <button class="btn btn-primary" ondblclick="eventFunction()">ondbclick</button>
+    <div class="mt-3 mb-3">
+        <button class="btn btn-primary" onclick="eventFunction()">onclick</button>
+        <button class="btn btn-primary" ondblclick="eventFunction()">ondbclick</button>
+    </div>
 
-    <button class="btn btn-primary" onmousewheel="eventFunction()">onmousewheel</button>
-    <button class="btn btn-primary" onmouseleave="eventFunction()">onmouseleave</button>
-    <button class="btn btn-primary" onmouseover="eventFunction()">onmouseover</button>
+    <div class="mt-3 mb-3">
+        <button class="btn btn-primary" onmousewheel="eventFunction()">onmousewheel</button>
+        <button class="btn btn-primary" onmouseleave="eventFunction()">onmouseleave</button>
+        <button class="btn btn-primary" onmouseover="eventFunction()">onmouseover</button>
+    </div>
 
-    <button class="btn btn-primary" onkeydown="eventFunction()">onkeydown</button>
-    <button class="btn btn-primary" onkeyup="eventFunction()">onkeyup</button>
+    <div class="mt-3 mb-3">
+        <button class="btn btn-primary" onkeydown="eventFunction()">onkeydown</button>
+        <button class="btn btn-primary" onkeyup="eventFunction()">onkeyup</button>
+    </div>
 
     <div class="mt-5">
         <p id="paragraf_id">
             Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
             corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,
-            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam saepe
+            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam
+            saepe
             sapiente sint sit temporibus, unde vero vitae.
         </p>
         <button class="btn btn-secondary" onclick="newDateData()">Data</button>
-        <span id="text_data" class="text-danger"></span>
+        <span id="text_data"></span>
     </div>
 
+    <div class="mt-5">
+        <p id="paragraf_id2" onmouseover="paragraphFunction()">
+            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
+            corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,
+            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam
+            saepe
+            sapiente sint sit temporibus, unde vero vitae.
+        </p>
+        <span id="text_data2" class="text-danger"></span>
+    </div>
 
+    <hr>
+    <div class="mt-3 mb-3">
+        <p id="dom_id" class="dom_class">Dom Öğreniyorum</p>
+        <button class="btn btn-warning" onclick="domData()">Dom Click</button>
+    </div>
+    <hr>
 </div>
 
 
