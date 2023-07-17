@@ -766,48 +766,48 @@ x--
 
 
 // event
-let eventFunction = () => {
-    alert("deneme")
-}
+// let eventFunction = () => {
+//     alert("deneme")
+// }
 
 
 // dom - Document Object Model (Sayfanın Obje Modeli)
-let newDateData = () => {
-    // let text = document.getElementById("text_data")
-
-    // Html
-    // text.innerHTML = "<b><mark>" + new Date().getFullYear() + "</mark></b>"
-    // text.innerHTML = `<b><mark> ${new Date().getFullYear()} </mark></b>`
-
-    // Query
-    let text = document.querySelector("#text_data")
-
-    // Text
-    // text.innerText = `<b><mark> ${new Date().getFullYear()} </mark></b>`
-    text.innerText = `${new Date().getFullYear()}`
-
-    // Css
-    text.style.color = "red"
-    text.style.backgroundColor = "black"
-    text.style.padding = "5px"
-}
+// let newDateData = () => {
+//     // let text = document.getElementById("text_data")
+//
+//     // Html
+//     // text.innerHTML = "<b><mark>" + new Date().getFullYear() + "</mark></b>"
+//     // text.innerHTML = `<b><mark> ${new Date().getFullYear()} </mark></b>`
+//
+//     // Query
+//     let text = document.querySelector("#text_data")
+//
+//     // Text
+//     // text.innerText = `<b><mark> ${new Date().getFullYear()} </mark></b>`
+//     text.innerText = `${new Date().getFullYear()}`
+//
+//     // Css
+//     text.style.color = "red"
+//     text.style.backgroundColor = "black"
+//     text.style.padding = "5px"
+// }
 
 // örnek -> paragrafın üzerine geldiğinde paragrafın altında yazı yazdırılsın
-let paragraphFunction = () => {
-    let text = document.getElementById("text_data2")
-    text.innerText = "paragrafın üzerine geldiniz"
-}
-
-let domData = () => {
-    // ID
-    let domUserData = document.getElementById("dom_id").innerText = "ID"
-
-    // Class
-    let domUserData2 = document.getElementsByClassName("dom_class")[0].innerText = "class data"
-
-    // Tag
-    let domUserData3 = document.getElementsByTagName("p")[1].innerText = "tag data"
-}
+// let paragraphFunction = () => {
+//     let text = document.getElementById("text_data2")
+//     text.innerText = "paragrafın üzerine geldiniz"
+// }
+//
+// let domData = () => {
+//     // ID
+//     let domUserData = document.getElementById("dom_id").innerText = "ID"
+//
+//     // Class
+//     let domUserData2 = document.getElementsByClassName("dom_class")[0].innerText = "class data"
+//
+//     // Tag
+//     let domUserData3 = document.getElementsByTagName("p")[1].innerText = "tag data"
+// }
 
 /*
 örnek -> butona tıklandığında kullanıcıya soru sorulsun
@@ -815,26 +815,48 @@ farklı bir sayfaya gidilsin mi?
 evet ise farklı bir sayfaya redirect
 hayır ise alert versin
 */
-let outSite = () => {
-    let userInformation = window.confirm("Farklı bir sayfaya gitmek istiyor musunuz?")
-        ? window.location = ("https://ecodation.com")
-        : window.alert("Bu sayfada kaldınız..")
-}
+// let outSite = () => {
+//     let userInformation = window.confirm("Farklı bir sayfaya gitmek istiyor musunuz?")
+//         ? window.location = ("https://ecodation.com")
+//         : window.alert("Bu sayfada kaldınız..")
+// }
 
 
-// listener
-let userListener = () => {
-    let listenerParagraph = document.getElementById("paragraf_id3")
-    listenerParagraph.addEventListener("click", function (e) {
-        // alert(e.preventDefault + " " + e.target)
-        document.getElementById("text_data3").innerHTML = "Okundu"
-    })
-}
-userListener()
+// // listener
+// let userListener = () => {
+//     let listenerParagraph = document.getElementById("paragraf_id3")
+//     listenerParagraph.addEventListener("click", function (e) {
+//         // alert(e.preventDefault + " " + e.target)
+//         document.getElementById("text_data3").innerHTML = "Okundu"
+//     })
+// }
+// userListener()
+
+
+// localStorage (Bireysel)
+// veriler bizim için önemlidir
+// verileri saklarız (Database, Browser..)
+// let localStorageData = () => {
+//     // Set
+//     const adi = localStorage.setItem("name", "Abdulhakim")
+//     const soyadi = localStorage.setItem("surname", prompt("Soyadınız: "))
+//     console.log(localStorage)
+//
+//     // Get
+//     const getAdi = localStorage.getItem("name")
+//     alert(getAdi)
+//
+//     // Remove
+//     localStorage.removeItem("name")
+//
+//     // Clear
+//     localStorage.clear()
+// }
+// localStorageData()
 
 
 
-// localStorage
+
 // KDV hesaplaması
 // jquery ajax GET/POST
 

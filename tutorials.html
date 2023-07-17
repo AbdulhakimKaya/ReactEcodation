@@ -28,8 +28,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+            integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+            crossorigin="anonymous">
+    </script>
 
 </head>
 
@@ -38,67 +40,106 @@
 <div class="container">
     <h3 class="text-center text-warning display-4">JavaScript</h3>
 
-    <div class="mt-3 mb-3">
-        <button class="btn btn-primary" onclick="eventFunction()">onclick</button>
-        <button class="btn btn-primary" ondblclick="eventFunction()">ondbclick</button>
-    </div>
+<!--    <div class="mt-3 mb-3">-->
+<!--        <button class="btn btn-primary" onclick="eventFunction()">onclick</button>-->
+<!--        <button class="btn btn-primary" ondblclick="eventFunction()">ondbclick</button>-->
+<!--    </div>-->
 
-    <div class="mt-3 mb-3">
-        <button class="btn btn-primary" onmousewheel="eventFunction()">onmousewheel</button>
-        <button class="btn btn-primary" onmouseleave="eventFunction()">onmouseleave</button>
-        <button class="btn btn-primary" onmouseover="eventFunction()">onmouseover</button>
-    </div>
+<!--    <div class="mt-3 mb-3">-->
+<!--        <button class="btn btn-primary" onmousewheel="eventFunction()">onmousewheel</button>-->
+<!--        <button class="btn btn-primary" onmouseleave="eventFunction()">onmouseleave</button>-->
+<!--        <button class="btn btn-primary" onmouseover="eventFunction()">onmouseover</button>-->
+<!--    </div>-->
 
-    <div class="mt-3 mb-3">
-        <button class="btn btn-primary" onkeydown="eventFunction()">onkeydown</button>
-        <button class="btn btn-primary" onkeyup="eventFunction()">onkeyup</button>
-    </div>
+<!--    <div class="mt-3 mb-3">-->
+<!--        <button class="btn btn-primary" onkeydown="eventFunction()">onkeydown</button>-->
+<!--        <button class="btn btn-primary" onkeyup="eventFunction()">onkeyup</button>-->
+<!--    </div>-->
 
-    <div class="mt-5">
-        <p id="paragraf_id">
-            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-            corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,
-            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam
-            saepe
-            sapiente sint sit temporibus, unde vero vitae.
-        </p>
-        <button class="btn btn-secondary" onclick="newDateData()">Data</button>
-        <span id="text_data"></span>
-    </div>
+<!--    <div class="mt-5">-->
+<!--        <p id="paragraf_id">-->
+<!--            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur-->
+<!--            corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,-->
+<!--            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam-->
+<!--            saepe-->
+<!--            sapiente sint sit temporibus, unde vero vitae.-->
+<!--        </p>-->
+<!--        <button class="btn btn-secondary" onclick="newDateData()">Data</button>-->
+<!--        <span id="text_data"></span>-->
+<!--    </div>-->
 
-    <div class="mt-5">
-        <p id="paragraf_id2" onmouseover="paragraphFunction()">
-            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-            corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,
-            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam
-            saepe
-            sapiente sint sit temporibus, unde vero vitae.
-        </p>
-        <span id="text_data2" class="text-danger"></span>
-    </div>
+<!--    <div class="mt-5">-->
+<!--        <p id="paragraf_id2" onmouseover="paragraphFunction()">-->
+<!--            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur-->
+<!--            corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,-->
+<!--            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam-->
+<!--            saepe-->
+<!--            sapiente sint sit temporibus, unde vero vitae.-->
+<!--        </p>-->
+<!--        <span id="text_data2" class="text-danger"></span>-->
+<!--    </div>-->
+
+<!--    <hr>-->
+<!--    <div class="mt-3 mb-3">-->
+<!--        <p id="dom_id" class="dom_class">Dom Öğreniyorum</p>-->
+<!--        <button class="btn btn-warning" onclick="domData()">Dom Click</button>-->
+<!--    </div>-->
+<!--    <hr>-->
+
+<!--    <div class="mt-5">-->
+<!--        <button class="btn btn-danger" onclick="outSite()">OutSite</button>-->
+<!--    </div>-->
+
+<!--    <div class="mt-5 mb-5">-->
+<!--        <p id="paragraf_id3" onmouseover="paragraphFunction()">-->
+<!--            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur-->
+<!--            corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,-->
+<!--            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam-->
+<!--            saepe-->
+<!--            sapiente sint sit temporibus, unde vero vitae.-->
+<!--        </p>-->
+<!--        <p>Log Information: </p>-->
+<!--        <span id="text_data3" class="text-danger"></span>-->
+<!--    </div>-->
+
+    <p id="paragraph_1">Paragraf 1</p>
+    <a href="#">data - 1</a> <br>
+    <a href="#">data - 2</a> <br>
+    <a href="#">data - 3</a> <br>
+    <p class="paragraph_2">Paragraf 2</p>
+
+    <script>
+        $("a").on("click", function (event) {
+            event.preventDefault()
+            // tıklanan tag'i gizle
+            $(this).hide()
+
+            // class'ı paragraph_2 olanı gizle
+            $(".paragraph_2").hide()
+
+            $("#paragraph_1")
+                .html("<b>Paragraf 1</b>")
+                .css("color", "orange")
+                .css("backgroundColor", "black")
+        })
+    </script>
 
     <hr>
-    <div class="mt-3 mb-3">
-        <p id="dom_id" class="dom_class">Dom Öğreniyorum</p>
-        <button class="btn btn-warning" onclick="domData()">Dom Click</button>
-    </div>
     <hr>
 
-    <div class="mt-5">
-        <button class="btn btn-danger" onclick="outSite()">OutSite</button>
+    <div id="clickme">
+        click here
     </div>
+    <img id="book" src="./img/forest.jpg" alt="" width="100" height="123">
 
-    <div class="mt-5 mb-5">
-        <p id="paragraf_id3" onmouseover="paragraphFunction()">
-            Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-            corporis delectus dolores ducimus, excepturi, fuga mollitia necessitatibus nostrum perferendis placeat,
-            praesentium quibusdam sapiente soluta! Amet delectus fuga ipsum molestiae perferendis praesentium quisquam
-            saepe
-            sapiente sint sit temporibus, unde vero vitae.
-        </p>
-        <p>Log Information: </p>
-        <span id="text_data3" class="text-danger"></span>
-    </div>
+    <script>
+        $("#clickme").on("click", function () {
+            $("#book").hide("slow", function () {
+                alert("Animation complete.");
+            });
+        })
+    </script>
+
 </div>
 
 
