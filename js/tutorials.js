@@ -773,11 +773,14 @@ let eventFunction = () => {
 
 // dom - Document Object Model (Sayfanın Obje Modeli)
 let newDateData = () => {
-    let text = document.getElementById("text_data")
+    // let text = document.getElementById("text_data")
 
     // Html
     // text.innerHTML = "<b><mark>" + new Date().getFullYear() + "</mark></b>"
     // text.innerHTML = `<b><mark> ${new Date().getFullYear()} </mark></b>`
+
+    // Query
+    let text = document.querySelector("#text_data")
 
     // Text
     // text.innerText = `<b><mark> ${new Date().getFullYear()} </mark></b>`
@@ -806,6 +809,17 @@ let domData = () => {
     let domUserData3 = document.getElementsByTagName("p")[1].innerText = "tag data"
 }
 
+/*
+örnek -> butona tıklandığında kullanıcıya soru sorulsun
+farklı bir sayfaya gidilsin mi?
+evet ise farklı bir sayfaya redirect
+hayır ise alert versin
+*/
+let outSite = () => {
+    let userInformation = window.confirm("Farklı bir sayfaya gitmek istiyor musunuz?")
+        ? window.location = ("https://ecodation.com")
+        : window.alert("Bu sayfada kaldınız..")
+}
 
 // listener
 // localStorage
