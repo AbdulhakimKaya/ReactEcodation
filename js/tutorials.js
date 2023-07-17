@@ -771,8 +771,22 @@ let eventFunction = () => {
 }
 
 
+// dom - Document Object Model (Sayfanın Obje Modeli)
+let newDateData = () => {
+    let text = document.getElementById("text_data")
+
+    // Html
+    // text.innerHTML = "<b><mark>" + new Date().getFullYear() + "</mark></b>"
+    // text.innerHTML = `<b><mark> ${new Date().getFullYear()} </mark></b>`
+
+    // Text
+    // text.innerText = `<b><mark> ${new Date().getFullYear()} </mark></b>`
+    text.innerText = `${new Date().getFullYear()}`
+}
+
+
+
 // listener
-// dom
 // localStorage
 // KDV hesaplaması
 // jquery ajax GET/POST
