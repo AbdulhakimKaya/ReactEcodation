@@ -821,7 +821,19 @@ let outSite = () => {
         : window.alert("Bu sayfada kaldınız..")
 }
 
+
 // listener
+let userListener = () => {
+    let listenerParagraph = document.getElementById("paragraf_id3")
+    listenerParagraph.addEventListener("click", function (e) {
+        // alert(e.preventDefault + " " + e.target)
+        document.getElementById("text_data3").innerHTML = "Okundu"
+    })
+}
+userListener()
+
+
+
 // localStorage
 // KDV hesaplaması
 // jquery ajax GET/POST
