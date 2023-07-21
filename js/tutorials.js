@@ -855,6 +855,28 @@ hayır ise alert versin
 // localStorageData()
 
 
+// hangi tuşa bastığımı bana göstersin (jQuery)
+// https://www.toptal.com/developers/keycode
+let userJqueryKey = () => {
+    // jQuery hazırlaması
+    $(document).ready(function () {
+        $(document).keydown(function (userButton) {
+            console.log(userButton)
+            console.log(userButton.keyCode)
+            console.log(typeof userButton.keyCode)
+
+            // browser sen bi şey yapma, yaparsam ben yaparım
+            userButton.preventDefault()
+
+            // keyCode (13) = enter
+            if (userButton.keyCode === 13) {
+                alert("Enter'a bastınız")
+                console.log("Enter'a bastınız")
+            }
+        })
+    })
+}
+userJqueryKey()
 
 
 // KDV hesaplaması
