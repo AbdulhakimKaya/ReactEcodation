@@ -522,41 +522,41 @@ x--
 //
 // let arrResult = () => {
 //     let data = arr()
-    // console.log(data)
-    // console.log(data[0])
-    // console.log(data[5])
-    // console.log(data[data.length-1])
-    //
-    // console.log("-------------------")
-    //
-    // // For Loop
-    // for (let i = 0; i < data.length; i++) {
-    //     console.log(data[i])
-    // }
-    //
-    // console.log("-------------------")
-    //
-    // // For in
-    // for (const dataKey in data) {
-    //     console.log(dataKey + " -> " + data[dataKey])
-    // }
-    //
-    // // For of
-    // console.log("-------------------")
-    //
-    // for (const dataValue of data) {
-    //     console.log(dataValue)
-    // }
-    //
-    // console.log("-------------------")
+// console.log(data)
+// console.log(data[0])
+// console.log(data[5])
+// console.log(data[data.length-1])
+//
+// console.log("-------------------")
+//
+// // For Loop
+// for (let i = 0; i < data.length; i++) {
+//     console.log(data[i])
+// }
+//
+// console.log("-------------------")
+//
+// // For in
+// for (const dataKey in data) {
+//     console.log(dataKey + " -> " + data[dataKey])
+// }
+//
+// // For of
+// console.log("-------------------")
+//
+// for (const dataValue of data) {
+//     console.log(dataValue)
+// }
+//
+// console.log("-------------------")
 
-    // For Each
-    // data.forEach(function (value, index, array){
-    //     console.log(index + " -> " + value)
-    // })
+// For Each
+// data.forEach(function (value, index, array){
+//     console.log(index + " -> " + value)
+// })
 
 
-    // filter
+// filter
 //     let result = data.filter((value, index, array) => {
 //         return value %2===0
 //     }).forEach((value, index, array) => {
@@ -857,26 +857,109 @@ hayır ise alert versin
 
 // hangi tuşa bastığımı bana göstersin (jQuery)
 // https://www.toptal.com/developers/keycode
-let userJqueryKey = () => {
-    // jQuery hazırlaması
+// let userJqueryKey = () => {
+//     // jQuery hazırlaması
+//     $(document).ready(function () {
+//         $(document).keydown(function (userButton) {
+//             console.log(userButton)
+//             console.log(userButton.keyCode)
+//             console.log(typeof userButton.keyCode)
+//
+//             // browser sen bi şey yapma, yaparsam ben yaparım
+//             userButton.preventDefault()
+//
+//             // keyCode (13) = enter
+//             if (userButton.keyCode === 13) {
+//                 alert("Enter'a bastınız")
+//                 console.log("Enter'a bastınız")
+//             }
+//         })
+//     })
+// }
+// userJqueryKey()
+
+
+// Vücüt Kitle İndeksi Hesaplama
+
+let vkiHesapla = () => {
+
+    // eğer input içinde değer varsa hata mesajı silinsin
+    // Kullanıcı sayı girmezse sayı girmediniz hatası versin (Regex)
+
     $(document).ready(function () {
-        $(document).keydown(function (userButton) {
-            console.log(userButton)
-            console.log(userButton.keyCode)
-            console.log(typeof userButton.keyCode)
+        $("#submit_id").click(function (event) {
+            // modal kapanmasın
+            event.preventDefault()
 
-            // browser sen bi şey yapma, yaparsam ben yaparım
-            userButton.preventDefault()
+            let weight, height, vki
+            let getLocalWeight, getLocalHeight, getLocalVki, getLocalVkiResult
 
-            // keyCode (13) = enter
-            if (userButton.keyCode === 13) {
-                alert("Enter'a bastınız")
-                console.log("Enter'a bastınız")
+            weight = jQuery.trim($("#weight_id").val())
+
+            if (weight === "") {
+                $("#weight_validation").html("Bu alan boş geçilemez")
+            } else if ($.isNumeric(weight) === false) {
+                $("#weight_validation").html("Sayı giriniz")
+            } else {
+                localStorage.setItem("weight", weight)
+                getLocalWeight = localStorage.getItem("weight")
+                console.log(`Local Weight: ${getLocalWeight}`)
+                // cast number
+                getLocalWeight = Number(getLocalWeight)
             }
+
+            height = jQuery.trim($("#height_id").val())
+
+            if (height === "") {
+                $("#height_validation").html("Bu alan boş geçilemez")
+            } else if ($.isNumeric(height) === false) {
+                $("#height_validation").html("Sayı giriniz")
+            } else {
+                localStorage.setItem("height", height)
+                getLocalHeight = localStorage.getItem("height")
+                console.log(`Local Height: ${getLocalHeight}`)
+                // cast height
+                getLocalHeight = Number(getLocalHeight)
+            }
+
+            vki = Number(getLocalWeight / (Math.pow((getLocalHeight / 100), 2))).toFixed(2)
+            localStorage.setItem("vki", vki)
+            getLocalVki = localStorage.getItem("vki")
+            console.log(getLocalVki)
+
+            // VKİ Result
+            if (getLocalVki < 18.6) {
+                $("#result_id").html(`${getLocalVki} -> Zayıf`)
+                localStorage.setItem("vki_result", "Zayıf")
+            }
+            else if (18.6 <= getLocalVki && getLocalVki < 25) {
+                $("#result_id").html(`${getLocalVki} -> Sağlıklı`)
+                localStorage.setItem("vki_result", "Sağlıklı")
+            }
+            else if (25 <= getLocalVki && getLocalVki < 30) {
+                $("#result_id").html(`${getLocalVki} -> Fazla Kilolu`)
+                localStorage.setItem("vki_result", "Fazla Kilolu")
+            }
+            else if (30 <= getLocalVki) {
+                $("#result_id").html(`${getLocalVki} -> Obez`)
+                localStorage.setItem("vki_result", "Obez")
+            }
+
+            getLocalVkiResult = localStorage.getItem("vki_result")
+            console.log(getLocalVkiResult)
         })
     })
 }
-userJqueryKey()
+vkiHesapla()
+let clearLocaleStorageData = () => {
+    if (window.confirm("Local Storage'ı silmek istediğinize emin misiniz?")) {
+        localStorage.clear()
+        alert("Silindi!")
+    } else {
+        alert("Silinmedi!")
+    }
+}
+
 
 
 // KDV hesaplaması

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Vücut Kitle İndeksi</title>
+    <!-- for language -->
+    <meta charset="utf-8"/>
+
+    <!-- for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- SEO -->
+    <meta name="author" content="Abdulhakim KAYA"/>
+    <meta name="description" content="for react ecodation"/>
+    <meta name="keyword" content="Html5, Css3, Js, Bootstrap5, React"/>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS v5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+            integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+            crossorigin="anonymous">
+    </script>
+
+</head>
+
+<body>
+<noscript>Bu Browser JavaScript'i Desteklemiyor..</noscript>
+<div class="container">
+    <h3 class="text-center text-warning display-4">Vücut Kitle İndeksi</h3>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#vkiModalId">
+        Vücut Kitle İndeksi
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="vkiModalId" tabindex="-1" aria-labelledby="vkiModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="vkiModalLabel">Vücut Kitle İndeksi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="get" autocomplete="on">
+                        <div class="mb-3">
+                            <label for="weight_id" class="form-label">Kilo</label>
+                            <input id="weight_id" name="weight_id" type="text" class="form-control" placeholder="Kilonuzu giriniz.." required>
+                            <span id="weight_validation" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="height_id" class="form-label">Boy</label>
+                            <input id="height_id" name="height_id" type="text" class="form-control" placeholder="Boyunuzu giriniz.." required>
+                            <span id="height_validation" class="text-danger"></span>
+                        </div>
+                        <div>
+                            <button id="clear_id" type="reset" class="btn btn-danger" value="Temizle">Temizle</button>
+                            <button id="submit_id" type="submit" class="btn btn-primary">VKI Hesapla</button>
+                        </div>
+                        <div class="mt-2">
+                            <button type="button" class="btn btn-success"  onclick="clearLocaleStorageData()" >Local Storage Temizle</button>
+                        </div>
+                    </form>
+
+                    <div class="alert alert-info alert-dismissible fade show mt-3" role="alert" id="result_alert">
+                        <strong>VKI: </strong> <span id="result_id"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- External JS -->
+<script src="./js/tutorials.js"></script>
+
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
